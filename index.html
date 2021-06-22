@@ -2,18 +2,92 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>TipsNote : GitHub Pages Sample</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.4/marx.css">
+<title>鈴木貴司のポートフォリオサイト</title>
+<link rel="stylesheet" href="css/text.css">
+<link rel="stylesheet" href="css/button.css">
 </head>
 
 <body>
-<main>
-  <h1>GitHub Pagesあああ</h1>
-  <a href="http://www.tam-tam.co.jp/tipsnote/"><button>TipsNoteあああ</button></a>
-</main>
+  <h1>鈴木貴司のポートフォリオサイト</h1>
+  <p>鈴木貴司のポートフォリオサイトです。</p>
+  <p>今回、ポートフォリオとして<b>「ローコードフレームワーク」</b>という、Javaの画面遷移フレームワークの作成を行いました。（※「要件定義」～「結合テスト」まで一貫して開発）
+  <br>その工程ドキュメント含めて、ポートフォリオとしてご覧ください。</p>
+  <p><b>[ローコードフレームワーク開発]</b></p>
+  <p><a href="https://github.com/suzuki617/lowcode-fw-repo/" target="_blank" class="btn btn--orange">GitHubリポジトリへ</a>　gitリポジトリ: https://github.com/suzuki617/lowcode-fw-repo.git</p>
+  <p><a href="https://github.com/suzuki617/lowcode-fw-repo/archive/refs/tags/v1.0.zip" class="btn btn--orange">ZIPでダウンロード　</a></p>
+  <hr noshade>
+  <h2>1. 「ローコードフレームワーク」背景/概要</h2>
+  <p>Javaを用いたサーバーサイドの画面遷移において、JavaEEのJAX-RSや、SpringBootが提供している各種フレームワーク等を使用するのが主流です。</p>
+  <p>開発現場においては、上記の技術を用いて画面遷移のアプリケーションの作りこみを行うのが普通ですが、頻繁に利用する画面遷移パターンとして、<br><b>「DBからデータを取得して画面遷移」（HTTP GETメソッド）</b>と<b>「DBにデータ保存をして画面遷移」（HTTP POSTメソッド）</b>の2パターンに分別されると考えました。<br><br></p>
+  <h3>1.1. DBからデータを取得して画面遷移（HTTP GETメソッド）</h3>
+  <p>&nbsp;&nbsp;MVCモデルを利用した「DBからデータを取得して画面遷移」（HTTP GETメソッド）の概要図です。</p>
+  <img src="image/gaiyou1.png" alt="DBからデータを取得して画面遷移" width="80%" height="80%">
+  <h3>1.2. DBにデータ保存をして画面遷移（HTTP POSTメソッド）</h3>
+  <p>&nbsp;&nbsp;MVCモデルを利用した「DBにデータ保存をして画面遷移」（HTTP POSTメソッド）の概要図です。</p>
+  <img src="image/gaiyou3.png" alt="DBにデータ保存をして画面遷移" width="80%" height="80%">
+  <p><b>上記概要図の中で、ビジネスロジック（model）とビュー（View）の処理をフレームワークとして提供する事が出来れば、<br>
+  アプリケーション自体のコード記述量を減らせる事が出来ると思い、フレームワークとして提供しようと考えました。</b><br><br></p>
+  <hr noshade>
+  <h2>2. ローコードフレームワーク適用後の概要図</h2>
+  <p>&nbsp;&nbsp;ローコードフレームワーク適用した際の概要図は、以下の形となります。<b>「ローコードフレームワーク」部分が今回の開発対象となります。</b></p>
+  <img src="image/gaiyou2.png" alt="フレームワーク適用後" width="80%" height="80%">
+  <hr noshade>
+  <h2>3. ローコードフレームワークの利用方法</h2>
+  <p>フレームワークの利用方法は、GitHubリポジトリの<b>「07_マニュアル」</b>にある<b>「ローコード画面遷移フレームワーク_導入マニュアル_v1.xlsx」</b>を参照して下さい。
+  <hr noshade>
+  <h2>4. 開発工数</h2>
+  <p>開発にかかった工数となります。</p>
+  <table border="1" style="font-size:15pt">
+  <thead bgcolor="#cccccc">
+    <tr>
+      <th>成果物</th>
+      <th>工数（人時）</th>
+    </tr>
+  </thead>
+    <tr>
+      <td>01_要件定義</td>
+      <td>5h</td>
+    </tr>
+    <tr>
+      <td>02_基本設計</td>
+      <td>8h</td>
+    </tr>
+    <tr>
+      <td>03_詳細設計</td>
+      <td>3h</td>
+    </tr>
+    <tr>
+      <td>04_製造（フレームワーク）</td>
+      <td>8h</td>
+    </tr>
+    <tr>
+      <td>04_製造（テスト画面）</td>
+      <td>4h</td>
+    </tr>
+    <tr>
+      <td>05_単体テスト</td>
+      <td>4h</td>
+    </tr>
+    <tr>
+      <td>06_結合テスト</td>
+      <td>3h</td>
+    </tr>
+    <tr>
+      <td>07_マニュアル</td>
+      <td>2h</td>
+    </tr>
+    <tfoot bgcolor="#cccccc">
+    <tr>
+      <td><b>合計</b></td>
+      <td><b>37 (人時)</b></td>
+    </tr>
+    </tfoot>
+  </table>
+  <p><b>作成した成果物に関しては、ページ上部の「GitHubリポジトリのclone」or「ZIPでダウンロード」ボタンにて、ご確認下さい。</b></p>
+  <p></p>
+  <hr noshade>
+  <p>以上、お手数おかけしますが、ご確認の程よろしくお願いします。</p>
+  <p> 連絡先：鈴木貴司（Takashi Suzuki）/ email：oira617@gmail.com</p>
 
-<script>
-console.log('GitHub Pages Sample');
-</script>
 </body>
 </html>
